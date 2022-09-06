@@ -1,3 +1,31 @@
 @import "reset";
 @import "variables";
 @import "responsive";
+
+body {
+  background-color: $white;
+}
+
+.btn {
+  text-transform: uppercase;
+}
+
+// container
+.container {
+  @include screen( pc ) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  @include screen( mobile ) {
+    width: 100%;
+  }
+}
+// main
+.main {}
+// --- header ---
+.header {}
+// --- buttons ---
+.logo {}
+.buttons {}
+.btn-start {}
+.btn-add {}

@@ -58,4 +58,20 @@ table {
   padding: 0;
 }
 
+body {
+  background-color: #ffffff;
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 594px) {
+  .container {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
