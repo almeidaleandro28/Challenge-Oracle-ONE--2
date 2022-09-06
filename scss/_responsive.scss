@@ -1,0 +1,17 @@
+@mixin screen($device) {
+  @if ($device == mobile ) {
+    @media screen and ( max-width: 594px ) {
+      @content;
+    }
+  }
+  @if ( $device == tablet ) {
+    @media screen and ( max-width: 960px ) {
+      @content;
+    }
+  }
+  @if ( $device == pc ) {
+    @media screen and ( min-width: 1000px ) {
+      @content;
+    }
+  }
+}
