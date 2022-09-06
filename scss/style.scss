@@ -4,6 +4,7 @@
 
 body {
   background-color: $white;
+  height: 100vh;
 }
 
 .btn {
@@ -13,15 +14,20 @@ body {
 // container
 .container {
   @include screen( pc ) {
+    display: flex;
+    flex-direction: column;
     width: 1200px;
     margin: 0 auto;
+
   }
   @include screen( mobile ) {
     width: 100%;
   }
 }
 // main
-.main {}
+.main {
+  height: 100%;
+}
 // --- header ---
 .header {}
 // --- buttons ---

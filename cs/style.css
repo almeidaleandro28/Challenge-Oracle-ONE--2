@@ -60,10 +60,17 @@ table {
 
 body {
   background-color: #ffffff;
+  height: 100vh;
+}
+
+.btn {
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 1000px) {
   .container {
+    display: flex;
+    flex-direction: column;
     width: 1200px;
     margin: 0 auto;
   }
@@ -72,6 +79,10 @@ body {
   .container {
     width: 100%;
   }
+}
+
+.main {
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
