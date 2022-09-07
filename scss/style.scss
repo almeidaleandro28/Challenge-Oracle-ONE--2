@@ -38,7 +38,10 @@ a {
 .header {
 
 }
-.logo {}
+
+.logo {
+  margin-top: 1rem;
+}
 // --- buttons ---
 
 .buttons {
@@ -53,18 +56,23 @@ a {
 
 .btn-start {
   background-color: $dark-blue-300;
-  color: $white;
   @include screen( pc ){
     width: 322px;
     height: 105px;
+    margin-right: 1rem;
+  }
+  a {
+    color: $white;
   }
 }
 
 .btn-add {
   background-color: $light-blue-300;
-  color: $dark-blue-300;
   @include screen( pc ) {
     width: 322px;
     height: 105px;
+  }
+  a {
+    color: $dark-blue-300;
   }
 }

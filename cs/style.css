@@ -92,6 +92,10 @@ a {
   background-color: #E9ECF8;
 }
 
+.logo {
+  margin-top: 1rem;
+}
+
 .buttons {
   display: flex;
 }
@@ -105,24 +109,29 @@ a {
 
 .btn-start {
   background-color: #0A3871;
-  color: #ffffff;
 }
 @media screen and (min-width: 1000px) {
   .btn-start {
     width: 322px;
     height: 105px;
+    margin-right: 1rem;
   }
+}
+.btn-start a {
+  color: #ffffff;
 }
 
 .btn-add {
   background-color: #E9ECF8;
-  color: #0A3871;
 }
 @media screen and (min-width: 1000px) {
   .btn-add {
     width: 322px;
     height: 105px;
   }
+}
+.btn-add a {
+  color: #0A3871;
 }
 
 /*# sourceMappingURL=style.css.map */
