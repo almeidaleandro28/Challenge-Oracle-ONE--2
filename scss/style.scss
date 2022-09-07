@@ -7,6 +7,10 @@ body {
   height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 .btn {
   text-transform: uppercase;
   border-radius: 24px;
@@ -34,23 +38,31 @@ body {
 .header {
 
 }
-// --- buttons ---
 .logo {}
+// --- buttons ---
+
 .buttons {
-  align-items: center;
   display: flex;
-  flex-direction: column;
-  flex: 1;
+  @include screen( pc ){
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+
+  }
 }
+
 .btn-start {
   background-color: $dark-blue-300;
+  color: $white;
   @include screen( pc ){
     width: 322px;
     height: 105px;
   }
 }
+
 .btn-add {
   background-color: $light-blue-300;
+  color: $dark-blue-300;
   @include screen( pc ) {
     width: 322px;
     height: 105px;

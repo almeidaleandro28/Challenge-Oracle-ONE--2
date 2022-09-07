@@ -63,6 +63,10 @@ body {
   height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 .btn {
   text-transform: uppercase;
   border-radius: 24px;
@@ -89,14 +93,19 @@ body {
 }
 
 .buttons {
-  align-items: center;
   display: flex;
-  flex-direction: column;
-  flex: 1;
+}
+@media screen and (min-width: 1000px) {
+  .buttons {
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .btn-start {
   background-color: #0A3871;
+  color: #ffffff;
 }
 @media screen and (min-width: 1000px) {
   .btn-start {
@@ -107,6 +116,7 @@ body {
 
 .btn-add {
   background-color: #E9ECF8;
+  color: #0A3871;
 }
 @media screen and (min-width: 1000px) {
   .btn-add {
