@@ -65,12 +65,14 @@ body {
 
 .btn {
   text-transform: uppercase;
+  border-radius: 24px;
 }
 
 @media screen and (min-width: 1000px) {
   .container {
     display: flex;
     flex-direction: column;
+    height: 100%;
     width: 1200px;
     margin: 0 auto;
   }
@@ -83,6 +85,34 @@ body {
 
 .main {
   height: 100%;
+  background-color: #E9ECF8;
+}
+
+.buttons {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.btn-start {
+  background-color: #0A3871;
+}
+@media screen and (min-width: 1000px) {
+  .btn-start {
+    width: 322px;
+    height: 105px;
+  }
+}
+
+.btn-add {
+  background-color: #E9ECF8;
+}
+@media screen and (min-width: 1000px) {
+  .btn-add {
+    width: 322px;
+    height: 105px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
