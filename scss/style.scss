@@ -1,8 +1,10 @@
 @import "reset";
 @import "variables";
 @import "responsive";
+// pages
 @import "game";
-
+@import "word";
+// ============= *** ============================
 body {
   background-color: $white;
   height: 100vh;
@@ -13,9 +15,31 @@ a {
 }
 
 .btn {
-  text-transform: uppercase;
+  align-items: center;
   border-radius: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 12px 24px ;
+  white-space: nowrap;
+  @include screen( pc ){
+    
+    margin-right: 1rem;
+  }
 }
+
+.btn-primary {
+  background-color: $dark-blue-300;
+  color: $white;
+}
+
+.btn-secundary {
+  background-color: $light-blue-300;
+  border: 1px solid $dark-blue-300;
+  color: $dark-blue-300;
+
+}
+
 
 // container
 .container {
@@ -30,11 +54,13 @@ a {
     width: 100%;
   }
 }
+
 // main
 .main {
   height: 100%;
   background-color: $light-blue-300;
 }
+
 // --- header ---
 .header {
 
@@ -51,29 +77,13 @@ a {
     flex: 2;
     justify-content: center;
     align-items: center;
-
   }
 }
 
 .btn-start {
-  background-color: $dark-blue-300;
-  @include screen( pc ){
-    width: 322px;
-    height: 105px;
-    margin-right: 1rem;
-  }
-  a {
-    color: $white;
-  }
+
 }
 
 .btn-add {
-  background-color: $light-blue-300;
-  @include screen( pc ) {
-    width: 322px;
-    height: 105px;
-  }
-  a {
-    color: $dark-blue-300;
-  }
+  
 }

@@ -1,1 +1,7 @@
-game.css
+.buttons {}
+.btn-newGame {
+  @include screen( pc ){
+   
+  }
+}
+.btn-giveUp {}
