@@ -10,15 +10,36 @@
 <body>
   <main class="main">
     <div class="container">
+
       <header class="header">
         <img class="logo" src="./img/brand-alura.svg" alt="alura logo">
       </header><!--end header-->
       <div class="buttons">
-        <a class="btn btn-primary btn-start" href="game.html">start game</a>
-        <a class="btn btn-secundary btn-add" href="word.html">add new word</a>
+        <a class="btn btn-primary btn-start" href="#">start game</a>
+        <a class="btn btn-secundary btn-add" href="#">add new word</a>
       </div><!--end buttons-->
+
+      <section class="game">
+        <div class="play">
+          play
+        </div><!--end play-->
+        <div class="buttons">
+          <a class="btn btn-primary btn-new" href="index.html">new game</a>
+          <a class="btn btn-secundary btn-giveUp" href="#">give up</a>
+        </div><!--end button-->
+      </section><!--section game-->
+
+      <section class="section-word">
+        <textarea class="input-text" name="input-text" id="input-text" cols="30" rows="10" placeholder="type a word or phrase"></textarea>
+        <div class="buttons">
+        <a class="btn btn-primary btn-save" href="#">save and start</a>
+        <a class="btn btn-secundary btn-cancel" href="index.html">cancel</a>
+        </div><!--end buttons-->
+      </section>
+      <!-- end secxtion word -->
     </div><!--end container-->
   </main>
   <!--end main-->
+<script src="./js/app.js"></script>
 </body>
 </html>

@@ -58,6 +58,22 @@ table {
   padding: 0;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-input {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
 body {
   background-color: #ffffff;
   height: 100vh;
@@ -97,6 +113,7 @@ a {
   .container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 100%;
     width: 1200px;
     margin: 0 auto;
@@ -126,6 +143,24 @@ a {
     justify-content: center;
     align-items: center;
   }
+}
+
+.game {
+  display: none;
+}
+
+.section-word {
+  display: none;
+}
+
+.input-text {
+  flex: 1;
+  margin-bottom: 20rem;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */

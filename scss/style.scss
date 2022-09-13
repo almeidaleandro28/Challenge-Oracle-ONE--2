@@ -46,6 +46,7 @@ a {
   @include screen( pc ) {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 100%;
     width: 1200px;
     margin: 0 auto;
@@ -86,4 +87,24 @@ a {
 
 .btn-add {
   
+}
+
+// sectiion game 
+.game {
+  display: none;
+}
+
+// section word
+.section-word {
+  display: none;
+}
+
+.input-text {
+  flex: 1;
+  margin-bottom: 20rem;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
 }
