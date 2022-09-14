@@ -142,11 +142,23 @@ a {
     flex: 2;
     justify-content: center;
     align-items: center;
+    height: max-content;
   }
 }
 
-.game {
-  display: none;
+@media screen and (min-width: 1000px) {
+  .game {
+    display: none;
+    flex: 1;
+  }
+}
+
+.play {
+  height: 600px;
+  text-align: center;
+}
+.play .canvas {
+  background-color: #0000ff;
 }
 
 .section-word {

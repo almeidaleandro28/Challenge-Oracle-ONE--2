@@ -78,6 +78,7 @@ a {
     flex: 2;
     justify-content: center;
     align-items: center;
+    height: max-content;
   }
 }
 
@@ -91,8 +92,24 @@ a {
 
 // sectiion game 
 .game {
-  display: none;
+  @include screen( pc ) {
+    display: none;
+    flex: 1;
+  }
+  
 }
+
+.play {
+  height: 600px;
+  text-align: center;
+  .canvas {
+    background-color: #0000ff;
+  }
+}
+
+
+
+
 
 // section word
 .section-word {
@@ -107,4 +124,5 @@ a {
 .d-flex {
   display: flex;
   flex-direction: column;
+  
 }
