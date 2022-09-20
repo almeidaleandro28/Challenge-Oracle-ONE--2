@@ -57,7 +57,7 @@ btnNew.addEventListener("click", function() {
 });
 
 btGiveUp.addEventListener("click", function(){
-  btns.style.display = "block";
+  // btns.style.display = "block";
   game.style.display = "none";
 });
 
