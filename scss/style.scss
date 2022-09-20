@@ -103,7 +103,8 @@ a {
   height: 600px;
   text-align: center;
   .canvas {
-    background-color: #0000ff;
+    background-color: $light-blue-300;
+    border: 1px solid #000000;
   }
 }
 

@@ -5,7 +5,6 @@ let secretWord = "";
 const canvas = document.querySelector(".canvas");
 const board = canvas.getContext("2d");
 
-
 const btnStart = document.querySelector(".btn-start");
 const btnAdd = document.querySelector(".btn-add");
 // 
@@ -25,18 +24,20 @@ const btnSave = document.querySelector(".btn-save");
 const findSecretWord = () => {
   const word = words[ Math.floor( Math.random() * words.length ) ];
   secretWord = word;
-  console.log( secretWord)
 }
 
 
 
 
 // ---- events buttons ------------------
+
 btnStart.addEventListener( "click", function() {
  btns.style.display = "none";
  game.style.display = "block";
  game.classList.toggle("d-flex");
  findSecretWord();
+ writeCanvas();
+ writeLines();
 });
 
 

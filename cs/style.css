@@ -158,7 +158,8 @@ a {
   text-align: center;
 }
 .play .canvas {
-  background-color: #0000ff;
+  background-color: #E9ECF8;
+  border: 1px solid #000000;
 }
 
 .section-word {
