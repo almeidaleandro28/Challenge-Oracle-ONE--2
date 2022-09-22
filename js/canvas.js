@@ -22,7 +22,7 @@ const writeLines = () => {
 	board.strokeStyle = "white";
 
   const widthLine = 200 / secretWord.length;
-  console.log( widthLine)
+ 
  
   for ( let i = 0; i < secretWord.length; i++ ) {
         board.moveTo(400+(widthLine*i), 500)

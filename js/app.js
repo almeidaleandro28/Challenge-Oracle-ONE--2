@@ -26,7 +26,29 @@ const findSecretWord = () => {
   secretWord = word;
 }
 
+// alphaneth start code 65 end 90
+const keyIsLetter =  ( code ) => {
+  return code.match(/[a-z]/);
+}
 
+
+// event document
+document.addEventListener( "keydown", ( event ) => {
+  const keyValue = event.key;
+  const keyCode =  event.code;
+
+  if ( keyIsLetter( keyValue) ) {
+    console.log( "is letter")
+  }
+  else {
+    console.log("not is letter")
+  }
+
+  // if ( keyValue.match(/[a-z]/i)) {
+  //   console.log( "is letter")
+  // }
+  
+});
 
 
 // ---- events buttons ------------------
