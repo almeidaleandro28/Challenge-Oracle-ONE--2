@@ -1,6 +1,8 @@
 // 
 const words = ["js", "java", "python"];
 let secretWord = "";
+let correctWords = [];
+let wrongWords = [];
 
 const canvas = document.querySelector(".canvas");
 const board = canvas.getContext("2d");
@@ -24,6 +26,7 @@ const btnSave = document.querySelector(".btn-save");
 const findSecretWord = () => {
   const word = words[ Math.floor( Math.random() * words.length ) ];
   secretWord = word;
+  console.log( secretWord)
 }
 
 // alphaneth start code 65 end 90
@@ -31,23 +34,23 @@ const keyIsLetter =  ( code ) => {
   return code.match(/[a-z]/);
 }
 
+// show correct word
+const correctWord = ( letter ) => {
+  
+}
 
 // event document
 document.addEventListener( "keydown", ( event ) => {
   const keyValue = event.key;
   const keyCode =  event.code;
+  // const letter = keyValue;
 
-  if ( keyIsLetter( keyValue) ) {
-    console.log( "is letter")
+  if ( keyIsLetter( keyValue) && secretWord.includes( keyValue) ) {
+    console.log("ok")
   }
   else {
     console.log("not is letter")
   }
-
-  // if ( keyValue.match(/[a-z]/i)) {
-  //   console.log( "is letter")
-  // }
-  
 });
 
 
