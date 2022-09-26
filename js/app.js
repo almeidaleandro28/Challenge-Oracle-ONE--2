@@ -34,10 +34,9 @@ const keyIsLetter =  ( code ) => {
   return code.match(/[a-z]/);
 }
 
-// show correct word
-const correctWord = ( letter ) => {
-  
-}
+
+// show wrong word
+
 
 // event document
 document.addEventListener( "keydown", ( event ) => {
@@ -46,10 +45,16 @@ document.addEventListener( "keydown", ( event ) => {
   // const letter = keyValue;
 
   if ( keyIsLetter( keyValue) && secretWord.includes( keyValue) ) {
-    console.log("ok")
+    for( let i = 0; i < secretWord.length; i++ ){
+      if ( secretWord[ i ] === keyValue ) {
+        correctWords.push( keyValue );
+        showCorrectWord( i )     
+      }
+    }
   }
   else {
-    console.log("not is letter")
+    wrongWords.push( keyValue);
+   
   }
 });
 

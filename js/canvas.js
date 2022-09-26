@@ -32,3 +32,15 @@ const writeLines = () => {
   board.stroke();
   // board.closePath();
 }
+
+// show correct word
+const showCorrectWord = ( letter ) => {
+  board.font = "bold 32px arial";
+  board.lineCap = "round";
+  board.fillStyle = "white";
+  board.lineWidth = 5;
+  const widthLetter = 200 / secretWord.length;
+  board.fillText( correctWords[ letter ], 400+(widthLetter * letter), 470 );
+  console.log( correctWords[letter])
+
+}
