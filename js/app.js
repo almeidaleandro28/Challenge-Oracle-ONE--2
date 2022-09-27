@@ -3,6 +3,7 @@ const words = ["js", "java", "python"];
 let secretWord = "";
 let correctWords = [];
 let wrongWords = [];
+let wrongs = 8;
 
 const canvas = document.querySelector(".canvas");
 const board = canvas.getContext("2d");
@@ -35,7 +36,10 @@ const keyIsLetter =  ( code ) => {
 }
 
 
-// show wrong word
+// counter words wrong
+const wordsWrong = () => { 
+  wrongs -= 1;
+}
 
 
 // event document
@@ -48,13 +52,18 @@ document.addEventListener( "keydown", ( event ) => {
     for( let i = 0; i < secretWord.length; i++ ){
       if ( secretWord[ i ] === keyValue ) {
         correctWords.push( keyValue );
-        showCorrectWord( i )     
+        showCorrectWord( i )   
+        console.log( "correct words ", correctWords)  
       }
     }
   }
   else {
     wrongWords.push( keyValue);
-   
+    wordsWrong();
+    showWrongWord(keyValue, wrongs);
+    console.log( "wrong words ", wrongWords)  
+    console.log( "wrongs ", wrongs)
+
   }
 });
 

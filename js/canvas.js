@@ -41,6 +41,14 @@ const showCorrectWord = ( letter ) => {
   board.lineWidth = 5;
   const widthLetter = 200 / secretWord.length;
   board.fillText( correctWords[ letter ], 400+(widthLetter * letter), 470 );
-  console.log( correctWords[letter])
+  
+}
 
+const showWrongWord = ( letter, err ) => {
+  board.font = "bold 32px arial";
+  board.lineCap = "round";
+  board.fillStyle = "white";
+  board.lineWidth = 5;
+  board.fillText( letter, 400+( 16 * err ), 540) ;
+  
 }
