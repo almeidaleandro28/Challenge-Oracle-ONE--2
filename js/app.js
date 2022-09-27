@@ -48,24 +48,28 @@ document.addEventListener( "keydown", ( event ) => {
   const keyCode =  event.code;
   // const letter = keyValue;
 
-  if ( keyIsLetter( keyValue) && secretWord.includes( keyValue) ) {
-    for( let i = 0; i < secretWord.length; i++ ){
-      if ( secretWord[ i ] === keyValue ) {
-        correctWords.push( keyValue );
-        showCorrectWord( i )   
-        console.log( "correct words ", correctWords)  
-      }
+  if ( keyIsLetter( keyValue ) ) {
+   if( wrongWords.includes( keyValue) || correctWords.includes( keyValue ) ) {
+    alert("palavra repetida!!")
+   } else {
+    if ( secretWord.includes( keyValue ) ) {
+      correctWords.push( keyValue );
+      console.log( correctWords );
+    } else {
+      wrongWords.push(keyValue);
+      console.log( wrongWords );
     }
+   }
+  } else {
+    alert( "não é uma letra!")
   }
-  else {
-    wrongWords.push( keyValue);
-    wordsWrong();
-    showWrongWord(keyValue, wrongs);
-    console.log( "wrong words ", wrongWords)  
-    console.log( "wrongs ", wrongs)
-
+})
+// 
+const lettterRepeat = ( arr, letter ) => {
+  if ( arr.includes( letter) ) {
+    alert("repeated letter! Type it again" );
   }
-});
+}
 
 
 // ---- events buttons ------------------
