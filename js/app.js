@@ -54,10 +54,14 @@ document.addEventListener( "keydown", ( event ) => {
    } else {
     if ( secretWord.includes( keyValue ) ) {
       correctWords.push( keyValue );
-      console.log( correctWords );
+      showCorrectWord( keyValue );
+      // console.log( correctWords );
     } else {
       wrongWords.push(keyValue);
-      console.log( wrongWords );
+      wordsWrong();
+      showWrongWord( keyValue, wrongs );
+      console.log( wrongs );
+      // console.log( wrongWords );
     }
    }
   } else {
@@ -65,12 +69,6 @@ document.addEventListener( "keydown", ( event ) => {
   }
 })
 // 
-const lettterRepeat = ( arr, letter ) => {
-  if ( arr.includes( letter) ) {
-    alert("repeated letter! Type it again" );
-  }
-}
-
 
 // ---- events buttons ------------------
 
