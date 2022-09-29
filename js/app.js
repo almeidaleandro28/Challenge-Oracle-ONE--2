@@ -54,7 +54,11 @@ document.addEventListener( "keydown", ( event ) => {
    } else {
     if ( secretWord.includes( keyValue ) ) {
       correctWords.push( keyValue );
-      showCorrectWord( keyValue );
+      for( let i = 0; i < secretWord.length; i++) {
+        if( secretWord[ i ] === keyValue) {
+          showCorrectWord( i );
+      }
+    }
       // console.log( correctWords );
     } else {
       wrongWords.push(keyValue);

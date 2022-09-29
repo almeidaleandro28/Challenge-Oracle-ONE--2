@@ -34,21 +34,21 @@ const writeLines = () => {
 }
 
 // show correct word
-const showCorrectWord = ( letter ) => {
+const showCorrectWord = ( index ) => {
   board.font = "bold 32px arial";
   board.lineCap = "round";
   board.fillStyle = "white";
   board.lineWidth = 5;
   const widthLetter = 200 / secretWord.length;
-  board.fillText( correctWords[ letter ], 400+(widthLetter * letter), 470 );
+  board.fillText( correctWords[ index ], 400+(widthLetter * index), 470 );
   
 }
 
-const showWrongWord = ( letter, err ) => {
+const showWrongWord = ( index, err ) => {
   board.font = "bold 32px arial";
   board.lineCap = "round";
   board.fillStyle = "white";
   board.lineWidth = 5;
-  board.fillText( letter, 400+( 16 * err ), 540) ;
+  board.fillText( index, 400+( 16 * err ), 540) ;
   
 }
